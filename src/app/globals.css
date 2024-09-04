@@ -2,32 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 240 10% 7%; /* #0C0A11 - Very dark grayish-violet for background */
+    --foreground: 270 10% 85%; /* Light grayish-violet for text */
+    --card: 270 15% 25%; /* #60446E - Dark muted violet for cards */
+    --card-foreground: 270 25% 85%; /* Light muted violet for card text */
+    --popover: 270 15% 25%; /* Same as card background */
+    --popover-foreground: 270 25% 85%; /* Same as card foreground */
+    --primary: 240 50% 5%; /* #0C0A11 - Deep dark grayish-violet for primary elements */
+    --primary-foreground: 270 5% 95%; /* Pale, ghostly white for primary text */
+    --secondary: 270 25% 25%; /* #60446E - Muted violet for secondary elements */
+    --secondary-foreground: 270 10% 85%; /* Light muted violet */
+    --muted: 270 20% 25%; /* Dark muted violet */
+    --muted-foreground: 270 5% 70%; /* Grayish-violet */
+    --accent: 270 20% 90%; /* #D0C5F0 - Light pastel violet */
+    --accent-foreground: 270 5% 95%; /* Pale, ghostly white */
+    --destructive: 0 60% 40%; /* Deep, blood red */
+    --destructive-foreground: 60 5% 95%; /* Pale, ghostly white */
+    --border: 240 10% 15%; /* Dark muted violet */
+    --input: 240 10% 15%; /* Same as border */
+    --ring: 240 20% 5%; /* Dark violet for rings */
+    --radius: 0.5rem;
+    --chart-1: 270 40% 40%; /* Violet */
+    --chart-2: 30 40% 30%; /* Earthy brown */
+    --chart-3: 340 40% 30%; /* Dark red */
+    --chart-4: 220 30% 40%; /* Muted blue */
+    --chart-5: 60 50% 30%; /* Olive green */
+  }
+
+  .dark {
+    --background: 240 20% 5%; /* #0C0A11 - Very dark violet for background */
+    --foreground: 270 5% 90%; /* Pale violet-gray for text */
+    --card: 270 25% 8%; /* #60446E - Dark violet for card background */
+    --card-foreground: 270 5% 85%; /* Pale violet for card text */
+    --popover: 270 25% 8%; /* Same as card background */
+    --popover-foreground: 270 5% 85%; /* Same as card foreground */
+    --primary: 240 50% 5%; /* #0C0A11 - Deep dark violet for primary elements */
+    --primary-foreground: 270 5% 95%; /* Pale, ghostly white */
+    --secondary: 270 25% 20%; /* #60446E - Muted violet */
+    --secondary-foreground: 270 5% 90%; /* Pale violet-gray */
+    --muted: 240 20% 15%; /* Dark violet */
+    --muted-foreground: 240 10% 75%; /* Grayish-violet */
+    --accent: 270 20% 80%; /* #D0C5F0 - Light pastel violet */
+    --accent-foreground: 270 5% 95%; /* Pale, ghostly white */
+    --destructive: 0 70% 30%; /* Deep, blood red */
+    --destructive-foreground: 60 5% 95%; /* Pale, ghostly white */
+    --border: 240 20% 15%; /* Dark violet */
+    --input: 240 20% 15%; /* Same as border */
+    --ring: 240 25% 8%; /* Deep violet for rings */
+    --chart-1: 270 40% 40%; /* Violet */
+    --chart-2: 30 40% 30%; /* Earthy brown */
+    --chart-3: 340 40% 30%; /* Dark red */
+    --chart-4: 220 30% 40%; /* Muted blue */
+    --chart-5: 60 50% 30%; /* Olive green */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 6s ease-out infinite;
 }

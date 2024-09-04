@@ -1,7 +1,11 @@
-import { Inter } from "next/font/google";
+import { Orbitron, Space_Grotesk, Ruslan_Display } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+
+
+const orbitron = Orbitron({ subsets: ["latin"], weight: "800" });
+const space = Space_Grotesk({ subsets: ["latin"], weight: "700" });
+const ruslan = Ruslan_Display({ subsets: ["latin"],  weight: "400" });
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +14,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={space.className}>
+      <body >{children}</body>
     </html>
   );
 }
