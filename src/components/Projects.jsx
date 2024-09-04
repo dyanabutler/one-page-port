@@ -34,7 +34,7 @@ export default function Projects({ setSelectedProject, selectedProject }) {
 
   return (
     <section className="col-span-1 text-foreground rounded shadow border border-purple-200 h-full">
-      <h2 className="text-xl font-semibold p-2 text-purple-200">PROJECTS</h2>
+      <h2 className="text-xl font-semibold p-2 text-purple-200 font-orbitron ">PROJECTS</h2>
 
       <ul>
         {projects.map((project, index) => (
@@ -45,8 +45,8 @@ export default function Projects({ setSelectedProject, selectedProject }) {
           >
             {/* Project Title */}
             <div className="flex justify-between items-center">
-              <span className="font-bold">{project.title}</span>
-              <span className="mr-2">🔍</span>
+              <span className="font-bold font-orbitron">{project.title}</span>
+              <span className="mr-2">💠</span>
             </div>
 
             {/* Mobile dropdown: Only show details for the clicked project on mobile */}
@@ -61,10 +61,10 @@ export default function Projects({ setSelectedProject, selectedProject }) {
                     height="250"
                     width="250"
                   />
-                  <p className="text-muted-foreground">{project.description}</p>
+                  <p className="text-muted-foreground font-plexmono">{project.description}</p>
                 </div>
                 {/* GitHub and Website Links */}
-                <div className="flex space-x-4 my-4">
+                <div className="flex space-x-4 my-4 font-orbitron">
                   {/* GitHub Link */}
                   <a
                     href={project.github}
@@ -115,11 +115,11 @@ export default function Projects({ setSelectedProject, selectedProject }) {
                 </div>
 
                 {/* Services and Stack */}
-                <div className="grid grid-cols-1 gap-6">
+                <div className="grid grid-cols-2 gap-6 mb-6">
                   {/* Services */}
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Services</h3>
-                    <ul className="list-disc list-inside space-y-1">
+                    <h3 className="mb-2 text-purple-200 font-orbitron text-md">Services</h3>
+                    <ul className="list-insidespace-y-1 font-plexmono text-sm">
                       {project.services.map((service, index) => (
                         <li key={index}>{service}</li>
                       ))}
@@ -128,8 +128,8 @@ export default function Projects({ setSelectedProject, selectedProject }) {
 
                   {/* Stack */}
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Stack</h3>
-                    <ul className="list-disc list-inside space-y-1">
+                    <h3 className="mb-2 text-purple-200 font-orbitron text-md">Stack</h3>
+                    <ul className="list-inside  space-y-1 font-plexmono text-sm">
                       {project.stack.map((tech, index) => (
                         <li key={index}>{tech}</li>
                       ))}

@@ -3,11 +3,13 @@ import "./globals.css";
 
 
 
-const orbitron = Orbitron({ subsets: ["latin"], weight: "800" });
-const space = Space_Grotesk({ subsets: ["latin"], weight: "700" });
-const ruslan = Ruslan_Display({ subsets: ["latin"],  weight: "400" });
-const handjet = Handjet({ subsets: ["latin"],  weight: "500" });
-const plexmono = IBM_Plex_Mono({ subsets: ["latin"],  weight: "500" });
+
+
+const orbitron = Orbitron({ subsets: ["latin"], weight: "800", variable: '--font-orbitron' });
+const space = Space_Grotesk({ subsets: ["latin"], weight: "700", variable: '--font-space' });
+const ruslan = Ruslan_Display({ subsets: ["latin"], weight: "400", variable: '--font-ruslan' });
+const handjet = Handjet({ subsets: ["latin"], weight: "500", variable: '--font-handjet' });
+const plexmono = IBM_Plex_Mono({ subsets: ["latin"], weight: "500", variable: '--font-plexmono' });
 
 export const metadata = {
   title: "Dyana Design",
@@ -16,9 +18,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={orbitron.className}>
-      <body >{children}
-        <div ></div>
+    <html lang="en" className={`${orbitron.variable} ${space.variable} ${ruslan.variable} ${handjet.variable} ${plexmono.variable}`}>
+      <body>{children}
+        
       </body>
     </html>
   );

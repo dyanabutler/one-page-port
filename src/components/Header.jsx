@@ -10,7 +10,7 @@ export default function Header() {
   };
 
   return (
-    <header className="text-foreground mt-2">
+    <header className="text-foreground font-orbitron mt-2">
       <div className="flex justify-between items-center px-4 md:px-8 mb-4">
         {/* SVG Links on the Left (Hidden on Mobile, Shown on Desktop) */}
         <div className="flex md:space-x-4">

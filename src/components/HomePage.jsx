@@ -7,6 +7,8 @@ import Details from "@/components/Details";
 import Footer from "./Footer";
 import { useState } from "react";
 
+
+
 export default function HomePage() {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -25,7 +27,7 @@ export default function HomePage() {
       </div>
 
      
-      <Footer />
+      <Footer/>
     </div>
   );
 }

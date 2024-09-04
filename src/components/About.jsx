@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function About() {
   return (
     <section className="col-span-1 p-2 text-foreground rounded shadow border border-purple-200">
-      <h2 className="text-xl font-semibold mb-2 text-purple-200">ABOUT</h2>
+      <h2 className="text-xl font-semibold font-orbitron mb-2 text-purple-200">ABOUT</h2>
 
       {/* Flex container to align image and text side by side */}
       <div className="flex items-start mb-4">
@@ -18,13 +18,13 @@ export default function About() {
         />
 
         {/* Text next to the image */}
-        <p>Dyana is an experienced UI/UX designer and a full stack developer in training.</p>
+        <p className='font-plexmono' >Dyana is an experienced UI/UX designer and a full stack developer in training.</p>
       </div>
 
       {/* Skills Section with SVG Icons - Only visible on medium screens and larger */}
       <div className=" mt-6 ">
-        <h2 className="text-xl  font-semibold mb-4 text-purple-200">Services</h2>
-        <ul className=" list-inside  space-y-2">
+        <h2 className="text-xl font-orbitron mb-4 text-purple-200">Services</h2>
+        <ul className=" list-inside font-plexmono space-y-2">
           <li>Website Creation & Deployment</li>
           <li>Graphic Design & Wireframing</li>
           <li>Product Management</li>

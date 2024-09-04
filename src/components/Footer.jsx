@@ -12,7 +12,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="text-foreground py-4 border-t border w-full">
+    <footer className="text-foreground py-6 border-t border w-full">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         {/* Left side: TrustPilot Link */}
         <div className="flex items-center">

@@ -17,6 +17,16 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        'lg-plus': '1600px', // Custom screen size for widths above 1300px
+      },
+      fontFamily: {
+        orbitron: ['var(--font-orbitron)', 'sans-serif'],
+        space: ['var(--font-space)', 'sans-serif'],
+        plexmono: ['var(--font-plexmono)', 'monospace'],
+        handjet: ['var(--font-handjet)', 'cursive'],
+        ruslan: ['var(--font-ruslan)', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -71,10 +81,7 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      fontFamily: {
-        inter: ["var(--font-inter)", "sans-serif"],
-        ruslan: ["var(--font-ruslany)", "cursive"],
-      },
+    
     },
   },
   plugins: [require("tailwindcss-animate")],

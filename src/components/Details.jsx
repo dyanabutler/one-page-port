@@ -7,12 +7,13 @@ export default function Details({ selectedProject }) {
   }
 
   return (
-    <section className="hidden md:block col-span-1 text-foreground border border-purple-200 rounded shadow p-4 h-full">
-      <div className="h-full flex flex-col">
+    <section className="hidden md:block col-span-1 text-foreground border border-purple-200 rounded shadow p-2 h-full">
+     <h2 className="text-xl font-semibold font-orbitron mb-2 text-purple-200">DETAILS</h2>
+     <div className="h-full flex flex-col">
         {/* Scrollable content */}
-        <div className="flex-grow max-h-[62vh] custom-scrollbar overflow-y-auto">
+        <div className="flex-grow max-h-[50vh] md:max-h-[50vh] lg:max-h-[45vh] lg-plus:max-h-[55vh]  custom-scrollbar overflow-y-auto">
           {/* Title */}
-          <h2 className="text-lg font-bold mb-4 ">{selectedProject.title}</h2>
+          <h2 className="text-lg font-bold font-orbitron mb-4 ">{selectedProject.title}</h2>
 
           {/* Image (now underneath the title, full width) */}
           <div className="flex justify-center items-center w-full  mb-4">
@@ -26,14 +27,14 @@ export default function Details({ selectedProject }) {
           </div>
 
           {/* Description (underneath the image) */}
-          <p className="text-md mb-6 ">{selectedProject.description}</p>
+          <p className="text-md font-plexmono mb-6 ">{selectedProject.description}</p>
 
           {/* Services and Stack */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             {/* Services */}
             <div>
-              <h3 className="text-sm font-semibold mb-2">Services</h3>
-              <ul className="list-disc list-inside space-y-1 text-sm">
+              <h3 className="text-md font-semibold mb-2 font-orbitron text-purple-200">Services</h3>
+              <ul className=" list-inside space-y-1 text-sm font-plexmono">
                 {selectedProject.services.map((service, index) => (
                   <li key={index}>{service}</li>
                 ))}
@@ -42,8 +43,8 @@ export default function Details({ selectedProject }) {
 
             {/* Stack */}
             <div>
-              <h3 className="text-sm font-semibold mb-2">Stack</h3>
-              <ul className="list-disc list-inside space-y-1 text-sm">
+              <h3 className="text-md font-semibold mb-2 font-orbitron text-purple-200">Stack</h3>
+              <ul className=" list-inside space-y-1 text-sm font-plexmono">
                 {selectedProject.stack.map((tech, index) => (
                   <li key={index}>{tech}</li>
                 ))}
@@ -53,14 +54,14 @@ export default function Details({ selectedProject }) {
         </div>
 
         {/* Links (GitHub and Website) */}
-        <div className="mt-4">
-          <div className="flex space-x-4">
+        <div className="mt-4 font-orbitron">
+          <div className="flex space-x-4 ">
             {/* GitHub link with SVG */}
             <a
               href={selectedProject.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center hover:underline"
+              className="flex items-center hover:underline "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
