@@ -10,10 +10,10 @@ export default function Header() {
   };
 
   return (
-    <header className="text-primary-foreground mt-2">
+    <header className="text-foreground mt-2">
       <div className="flex justify-between items-center px-4 md:px-8 mb-4">
         {/* SVG Links on the Left (Hidden on Mobile, Shown on Desktop) */}
-        <div className="hidden md:flex md:space-x-4">
+        <div className="flex md:space-x-4">
           <a
             href="#"
             className="rounded-full p-2 transform transition duration-300 hover:scale-110"
@@ -72,9 +72,10 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Scrolling Text in the Middle (Visible on all screen sizes) */}
-        <div className="flex-1">
-          <div className="relative overflow-hidden whitespace-nowrap rounded-md">
+        {/* Group Scrolling Text and Contact Button on the Right (for larger screens) */}
+        <div className="flex items-center space-x-4">
+          {/* Scrolling Text */}
+          <div className="relative overflow-hidden whitespace-nowrap rounded-md hidden md:block">
             {/* The blur effect on the scrolling text */}
             <div className="absolute inset-0 bg-black bg-opacity-30 blur-lg transition duration-300 hover:blur-none"></div>
             <div className="animate-marquee relative z-10">
@@ -83,18 +84,18 @@ export default function Header() {
               <span className="mx-2">Step 3. Shart </span>
             </div>
           </div>
-        </div>
 
-        {/* "Contact" Button on the Right (Visible on all screen sizes) */}
-        <div className="ml-4">
-          <a
-            href="#_"
-            className="relative inline-block px-4 py-2 font-medium group "
-          >
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0 rounded-sm"></span>
-            <span className="absolute inset-0 w-full h-full bg-muted-foreground rounded-sm border-2 border-black group-hover:bg-black"></span>
-            <span className="relative text-primary group-hover:text-muted-foreground">Contact</span>
-          </a>
+          {/* "Contact" Button */}
+          <div>
+            <a
+              href="#_"
+              className="relative inline-block px-4 py-2 font-medium group "
+            >
+              <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0 rounded-sm"></span>
+              <span className="absolute inset-0 w-full h-full bg-purple-200 rounded-sm border-2 border-purple-900 group-hover:bg-purple-950"></span>
+              <span className="relative text-gray-900 group-hover:text-muted-foreground">Contact</span>
+            </a>
+          </div>
         </div>
       </div>
 

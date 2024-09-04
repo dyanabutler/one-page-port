@@ -6,17 +6,27 @@ import ReactMarkdown from 'react-markdown';
 export default function Projects({ setSelectedProject, selectedProject }) {
   const projects = [
     {
-      title: 'Project A',
-      markdownPath: '/projects/project-a.md', // Markdown file path
+      title: 'VOICE by iAccess Life',
+      markdownPath: '/projects/project-a.md',
       image: '/vercel.svg',
     },
     {
-      title: 'Project B',
+      title: 'WRLD CHNGRS',
       markdownPath: '/projects/project-b.md',
       image: '/vercel.svg',
     },
     {
-      title: 'Project C',
+      title: 'YARN ODYSSEY',
+      markdownPath: '/projects/project-c.md',
+      image: '/vercel.svg',
+    },
+    {
+      title: 'CYGOTH CLUB',
+      markdownPath: '/projects/project-c.md',
+      image: '/vercel.svg',
+    },
+    {
+      title: 'BIANCHINI ART',
       markdownPath: '/projects/project-c.md',
       image: '/vercel.svg',
     },
@@ -27,7 +37,6 @@ export default function Projects({ setSelectedProject, selectedProject }) {
 
   useEffect(() => {
     if (selectedProject?.markdownPath) {
-      // Fetch the markdown content from the file when the project is selected
       fetch(selectedProject.markdownPath)
         .then((response) => response.text())
         .then((text) => setMarkdownContent(text))
@@ -41,8 +50,8 @@ export default function Projects({ setSelectedProject, selectedProject }) {
   };
 
   return (
-    <section className="col-span-1 text-muted-foreground rounded shadow border-border border-r border-l">
-      <h2 className="text-xl font-semibold p-2 ">Projects</h2>
+    <section className="col-span-1 text-foreground rounded shadow border-border border-r border-l h-full">
+      <h2 className="text-xl font-semibold p-2 text-purple-200">PROJECTS</h2>
 
       <ul>
         {projects.map((project, index) => (
@@ -71,8 +80,11 @@ export default function Projects({ setSelectedProject, selectedProject }) {
                       height="250"
                       width="250"
                     />
-                    {/* Markdown Rendering */}
-                    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+
+                    {/* Scrollable markdown content */}
+                    <div className="max-h-64 overflow-y-auto  p-2 rounded">
+                      <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+                    </div>
                   </div>
                 )}
               </div>

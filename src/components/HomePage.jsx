@@ -13,10 +13,10 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen text-muted-foreground">
       <Header />
-      <div className="flex flex-1">
+      <div className="flex flex-1  ">
         <div className="grid grid-cols-1 md:grid-cols-3 text-muted-foreground w-full border-t">
           <About />
-          <Projects setSelectedProject={setSelectedProject} selectedProject={selectedProject} />
+          <Projects setSelectedProject={setSelectedProject} />
           <Details selectedProject={selectedProject} />
         </div>
       </div>

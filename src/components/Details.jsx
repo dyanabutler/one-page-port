@@ -19,11 +19,11 @@ export default function Details({ selectedProject }) {
   }, [selectedProject]);
 
   return (
-    <section className="col-span-1  rounded shadow hidden md:block ">
-      <h2 className="text-xl font-semibold p-2">Details</h2>
+    <section className="col-span-1 text-foreground rounded shadow hidden md:block ">
+      <h2 className="text-xl font-semibold p-2 text-purple-200">DETAILS</h2>
 
       {selectedProject ? (
-        <div className='bg-black p-4 '>
+        <div className=' p-4 '>
           <h3 className="text-lg font-semibold">{selectedProject.title}</h3>
           <Image
             src={selectedProject.image}
@@ -35,7 +35,7 @@ export default function Details({ selectedProject }) {
           <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
         </div>
       ) : (
-        <p className='p-2'>Select a project to see the details.</p>
+        <p className='p-2'>Select a project to see details.</p>
       )}
     </section>
   );
