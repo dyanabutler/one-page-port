@@ -1,48 +1,31 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
-import ReactMarkdown from 'react-markdown';
 
 export default function Projects({ setSelectedProject, selectedProject }) {
   const projects = [
     {
       title: 'VOICE by iAccess Life',
-      markdownPath: '/projects/project-a.md',
-      image: '/vercel.svg',
+      description: 'This is a brief description of VOICE by iAccess Life, focusing on accessibility solutions.',
+      image: '/voice.svg',
+      services: ['Mobile App Development', 'Accessibility Testing', 'Product Management'],
+      stack: ['React Native', 'Node.js', 'AWS'],
+      github: "https://github.com/your-project",
+      website: "https://your-project-website.com"
     },
     {
       title: 'WRLD CHNGRS',
-      markdownPath: '/projects/project-b.md',
-      image: '/vercel.svg',
+      description: 'WRLD CHNGRS is a platform built for connecting communities with social impact projects.',
+      image: '/sticker_logo.png',
+      services: ['Website Development', 'UI/UX Design', 'Community Engagement'],
+      stack: ['Next.js', 'Tailwind CSS', 'Firebase', 'Stripe API'],
+      github: "https://github.com/your-project",
+      website: "https://your-project-website.com"
     },
-    {
-      title: 'YARN ODYSSEY',
-      markdownPath: '/projects/project-c.md',
-      image: '/vercel.svg',
-    },
-    {
-      title: 'CYGOTH CLUB',
-      markdownPath: '/projects/project-c.md',
-      image: '/vercel.svg',
-    },
-    {
-      title: 'BIANCHINI ART',
-      markdownPath: '/projects/project-c.md',
-      image: '/vercel.svg',
-    },
+    // Add more projects as needed
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
-  const [markdownContent, setMarkdownContent] = useState('');
-
-  useEffect(() => {
-    if (selectedProject?.markdownPath) {
-      fetch(selectedProject.markdownPath)
-        .then((response) => response.text())
-        .then((text) => setMarkdownContent(text))
-        .catch((error) => console.error('Failed to load markdown file:', error));
-    }
-  }, [selectedProject]);
 
   const handleProjectClick = (project, index) => {
     setSelectedProject(project);
@@ -50,43 +33,111 @@ export default function Projects({ setSelectedProject, selectedProject }) {
   };
 
   return (
-    <section className="col-span-1 text-foreground rounded shadow border-border border-r border-l h-full">
+    <section className="col-span-1 text-foreground rounded shadow border border-purple-200 h-full">
       <h2 className="text-xl font-semibold p-2 text-purple-200">PROJECTS</h2>
 
       <ul>
         {projects.map((project, index) => (
           <li
             key={index}
-            className="cursor-pointer p-4 border-b hover:bg-black md:hover:bg-muted-foreground md:hover:text-black flex flex-col"
+            className="cursor-pointer p-4 border-b border-purple-200 hover:bg-black md:hover:bg-muted-foreground md:hover:text-black flex flex-col"
             onClick={() => handleProjectClick(project, index)}
           >
+            {/* Project Title */}
             <div className="flex justify-between items-center">
               <span className="font-bold">{project.title}</span>
               <span className="mr-2">🔍</span>
             </div>
 
-            {/* Mobile dropdown: Only show details for the clicked project */}
+            {/* Mobile dropdown: Only show details for the clicked project on mobile */}
             {activeIndex === index && (
-              <div className="md:hidden mt-2 p-4 bg-transparent rounded shadow">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-lg font-semibold">{selectedProject?.title}</h3>
+              <div className="md:hidden mt-4 p-4 bg-transparent rounded shadow">
+                {/* Image and Description */}
+                <div className="flex flex-col mb-6">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-auto rounded mb-4"
+                    height="250"
+                    width="250"
+                  />
+                  <p className="text-muted-foreground">{project.description}</p>
                 </div>
-                {selectedProject && (
-                  <div>
-                    <Image
-                      src={selectedProject.image}
-                      alt={selectedProject.title}
-                      className="w-full h-auto rounded mb-4"
-                      height="250"
-                      width="250"
-                    />
+                {/* GitHub and Website Links */}
+                <div className="flex space-x-4 my-4">
+                  {/* GitHub Link */}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-blue-500 hover:underline"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.683-.217.683-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.37-1.34-3.37-1.34-.454-1.153-1.11-1.46-1.11-1.46-.907-.62.068-.608.068-.608 1.004.07 1.533 1.032 1.533 1.032.892 1.53 2.341 1.088 2.912.832.09-.647.35-1.089.636-1.34-2.22-.252-4.555-1.112-4.555-4.943 0-1.091.39-1.983 1.03-2.682-.103-.253-.447-1.27.097-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.797a9.566 9.566 0 012.505.338c1.909-1.294 2.75-1.026 2.75-1.026.544 1.377.2 2.394.098 2.647.64.699 1.03 1.591 1.03 2.682 0 3.841-2.338 4.687-4.565 4.934.359.31.678.92.678 1.854 0 1.338-.012 2.417-.012 2.746 0 .267.181.576.688.478C19.14 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                      />
+                    </svg>
+                    GitHub
+                  </a>
 
-                    {/* Scrollable markdown content */}
-                    <div className="max-h-64 overflow-y-auto  p-2 rounded">
-                      <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-                    </div>
+                  {/* Website Link */}
+                  <a
+                    href={project.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-blue-500 hover:underline"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 11H9m-4 2h5m4 0h5m-5-6h5m-5-2h3m1 8a9 9 0 110-18 9 9 0 010 18z"
+                      />
+                    </svg>
+                    Website
+                  </a>
+                </div>
+
+                {/* Services and Stack */}
+                <div className="grid grid-cols-1 gap-6">
+                  {/* Services */}
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Services</h3>
+                    <ul className="list-disc list-inside space-y-1">
+                      {project.services.map((service, index) => (
+                        <li key={index}>{service}</li>
+                      ))}
+                    </ul>
                   </div>
-                )}
+
+                  {/* Stack */}
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Stack</h3>
+                    <ul className="list-disc list-inside space-y-1">
+                      {project.stack.map((tech, index) => (
+                        <li key={index}>{tech}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                
               </div>
             )}
           </li>

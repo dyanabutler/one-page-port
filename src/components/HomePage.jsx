@@ -11,15 +11,20 @@ export default function HomePage() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div className="flex flex-col min-h-screen text-muted-foreground">
+    <div className="flex flex-col h-screen">
+      {/* Header */}
       <Header />
-      <div className="flex flex-1  ">
-        <div className="grid grid-cols-1 md:grid-cols-3 text-muted-foreground w-full border-t">
+
+      {/* Main content grows to fill space, ensuring footer is at the bottom */}
+      <div className="flex-grow flex">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full">
           <About />
           <Projects setSelectedProject={setSelectedProject} />
           <Details selectedProject={selectedProject} />
         </div>
       </div>
+
+     
       <Footer />
     </div>
   );

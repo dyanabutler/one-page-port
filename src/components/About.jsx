@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <section className="col-span-1 p-2 text-foreground rounded shadow">
+    <section className="col-span-1 p-2 text-foreground rounded shadow border border-purple-200">
       <h2 className="text-xl font-semibold mb-2 text-purple-200">ABOUT</h2>
 
       {/* Flex container to align image and text side by side */}
@@ -30,6 +30,8 @@ export default function About() {
           <li>Product Management</li>
         </ul>
       </div>
+
+     
     </section>
   );
 }

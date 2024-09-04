@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={orbitron.className}>
       <body >{children}
-        <div className="static-noise"></div>
+        <div ></div>
       </body>
     </html>
   );

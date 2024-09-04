@@ -1,42 +1,110 @@
 'use client';
 import Image from 'next/image';
-import ReactMarkdown from 'react-markdown';
-import { useState, useEffect } from 'react';
 
 export default function Details({ selectedProject }) {
-  const [markdownContent, setMarkdownContent] = useState('');
-
-  useEffect(() => {
-    if (selectedProject?.markdownPath) {
-      // Fetch the markdown content from the file when the project is selected
-      fetch(selectedProject.markdownPath)
-        .then((response) => response.text())
-        .then((text) => setMarkdownContent(text))
-        .catch((error) => console.error('Failed to load markdown file:', error));
-    } else {
-      setMarkdownContent(''); // Clear the markdown content when no project is selected
-    }
-  }, [selectedProject]);
+  if (!selectedProject) {
+    return <p className="p-2">Select a project to see details.</p>;
+  }
 
   return (
-    <section className="col-span-1 text-foreground rounded shadow hidden md:block ">
-      <h2 className="text-xl font-semibold p-2 text-purple-200">DETAILS</h2>
+    <section className="hidden md:block col-span-1 text-foreground border border-purple-200 rounded shadow p-4 h-full">
+      <div className="h-full flex flex-col">
+        {/* Scrollable content */}
+        <div className="flex-grow max-h-[62vh] custom-scrollbar overflow-y-auto">
+          {/* Title */}
+          <h2 className="text-lg font-bold mb-4 ">{selectedProject.title}</h2>
 
-      {selectedProject ? (
-        <div className=' p-4 '>
-          <h3 className="text-lg font-semibold">{selectedProject.title}</h3>
-          <Image
-            src={selectedProject.image}
-            alt={selectedProject.title}
-            className="w-full h-auto rounded mb-4"
-            height="250"
-            width="250"
-          />
-          <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+          {/* Image (now underneath the title, full width) */}
+          <div className="flex justify-center items-center w-full  mb-4">
+            <Image
+              src={selectedProject.image}
+              alt={selectedProject.title}
+              className="w-full h-auto rounded"
+              height={250}
+              width={600} // Adjusted width and height for better scaling
+            />
+          </div>
+
+          {/* Description (underneath the image) */}
+          <p className="text-md mb-6 ">{selectedProject.description}</p>
+
+          {/* Services and Stack */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            {/* Services */}
+            <div>
+              <h3 className="text-sm font-semibold mb-2">Services</h3>
+              <ul className="list-disc list-inside space-y-1 text-sm">
+                {selectedProject.services.map((service, index) => (
+                  <li key={index}>{service}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Stack */}
+            <div>
+              <h3 className="text-sm font-semibold mb-2">Stack</h3>
+              <ul className="list-disc list-inside space-y-1 text-sm">
+                {selectedProject.stack.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
-      ) : (
-        <p className='p-2'>Select a project to see details.</p>
-      )}
+
+        {/* Links (GitHub and Website) */}
+        <div className="mt-4">
+          <div className="flex space-x-4">
+            {/* GitHub link with SVG */}
+            <a
+              href={selectedProject.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center hover:underline"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.09.683-.217.683-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.37-1.34-3.37-1.34-.454-1.153-1.11-1.46-1.11-1.46-.907-.62.068-.608.068-.608 1.004.07 1.533 1.032 1.533 1.032.892 1.53 2.341 1.088 2.912.832.09-.647.35-1.089.636-1.34-2.22-.252-4.555-1.112-4.555-4.943 0-1.091.39-1.983 1.03-2.682-.103-.253-.447-1.27.097-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.797a9.566 9.566 0 012.505.338c1.909-1.294 2.75-1.026 2.75-1.026.544 1.377.2 2.394.098 2.647.64.699 1.03 1.591 1.03 2.682 0 3.841-2.338 4.687-4.565 4.934.359.31.678.92.678 1.854 0 1.338-.012 2.417-.012 2.746 0 .267.181.576.688.478C19.14 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                />
+              </svg>
+              GitHub
+            </a>
+
+            {/* Website link with SVG */}
+            <a
+              href={selectedProject.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center hover:underline"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 11H9m-4 2h5m4 0h5m-5-6h5m-5-2h3m1 8a9 9 0 110-18 9 9 0 010 18z"
+                />
+              </svg>
+              Website
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

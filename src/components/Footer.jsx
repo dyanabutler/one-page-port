@@ -12,7 +12,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="text-foreground py-4 border-t border">
+    <footer className="text-foreground py-4 border-t border w-full">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         {/* Left side: TrustPilot Link */}
         <div className="flex items-center">
@@ -49,7 +49,7 @@ const Footer = () => {
               key={index}
               href={link.href}
               target="_blank"
-              className="transition duration-300 hover:text-accent-foreground flex items-center"
+              className="transition duration-300 flex items-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

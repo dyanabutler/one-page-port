@@ -100,7 +100,7 @@ export default function Header() {
       </div>
 
       {/* h1 Section with Borders */}
-      <div className="border-t border-b border-white">
+      <div className="border-t border-r border-l border-purple-200">
         <Image
           src="/header2.png"
           alt="header image"
