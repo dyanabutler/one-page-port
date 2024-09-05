@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 export default function Details({ selectedProject }) {
   if (!selectedProject) {
-    return <p className="p-2">Select a project to see details.</p>;
+    return <p className="p-2 m-8 font-orbitron">Select a project to see details.</p>;
   }
 
   return (
-    <section className="hidden md:block col-span-1 text-foreground border border-purple-200 rounded shadow p-2 h-full">
+    <section className="hidden md:block col-span-1 text-foreground border shadow p-2 h-full">
      <h2 className="text-xl font-semibold font-orbitron mb-2 text-purple-200">DETAILS</h2>
      <div className="h-full flex flex-col">
         {/* Scrollable content */}
@@ -33,8 +33,8 @@ export default function Details({ selectedProject }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             {/* Services */}
             <div>
-              <h3 className="text-md font-semibold mb-2 font-orbitron text-purple-200">Services</h3>
-              <ul className=" list-inside space-y-1 text-sm font-plexmono">
+              <h3 className="text-md md:text-lg font-semibold mb-2 font-orbitron text-purple-200">Services</h3>
+              <ul className=" list-inside space-y-1 text-sm md:text-lg font-plexmono">
                 {selectedProject.services.map((service, index) => (
                   <li key={index}>{service}</li>
                 ))}
@@ -43,8 +43,8 @@ export default function Details({ selectedProject }) {
 
             {/* Stack */}
             <div>
-              <h3 className="text-md font-semibold mb-2 font-orbitron text-purple-200">Stack</h3>
-              <ul className=" list-inside space-y-1 text-sm font-plexmono">
+              <h3 className="text-md md:text-lg font-semibold mb-2 font-orbitron text-purple-200">Stack</h3>
+              <ul className=" list-inside space-y-1 text-sm md:text-lg font-plexmono">
                 {selectedProject.stack.map((tech, index) => (
                   <li key={index}>{tech}</li>
                 ))}
@@ -61,7 +61,7 @@ export default function Details({ selectedProject }) {
               href={selectedProject.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center hover:underline "
+              className="flex items-center  text-blue-500 hover:underline "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ export default function Details({ selectedProject }) {
               href={selectedProject.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center hover:underline"
+              className="flex items-center  text-blue-500 hover:underline"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

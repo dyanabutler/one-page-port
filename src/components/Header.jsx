@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className="text-foreground font-orbitron mt-2">
-      <div className="flex justify-between items-center px-4 md:px-8 mb-4">
+      <div className="flex justify-between items-center px-4 md:px-8 m-2 ">
         {/* SVG Links on the Left (Hidden on Mobile, Shown on Desktop) */}
         <div className="flex md:space-x-4">
           <a
@@ -100,7 +100,7 @@ export default function Header() {
       </div>
 
       {/* h1 Section with Borders */}
-      <div className="border-t border-r border-l border-purple-200">
+      <div className=" ">
         <Image
           src="/header2.png"
           alt="header image"
