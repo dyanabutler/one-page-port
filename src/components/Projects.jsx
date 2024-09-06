@@ -33,10 +33,10 @@ export default function Projects({ setSelectedProject, selectedProject }) {
     },
     {
       title: 'CYGOTH CLUB',
-      description: 'A platform connecting communities with social impact projects.',
+      description: 'My own stab at an NFT Collection',
       image: '/cygoth.gif',
-      services: ['Website Development', 'UI/UX Design', 'Community Engagement'],
-      stack: ['Next.js', 'Procreate', 'OpenSea', 'SmartContract'],
+      services: ['Digital Art', '', 'Community Engagement'],
+      stack: ['Next.js', 'Procreate', 'OpenSea', ],
       github: "https://github.com/your-project",
       website: "https://cygoth.io"
     },
