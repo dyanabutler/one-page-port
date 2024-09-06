@@ -88,7 +88,7 @@ export default function Header() {
           {/* "Contact" Button */}
           <div>
             <a
-              href="#_"
+              href="mailto:0xdyana@gmail.com"
               className="relative inline-block px-4 py-2 font-medium group "
             >
               <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0 rounded-sm"></span>
