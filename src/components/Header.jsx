@@ -79,9 +79,9 @@ export default function Header() {
             {/* The blur effect on the scrolling text */}
             <div className="absolute inset-0 bg-black bg-opacity-30 blur-lg transition duration-300 hover:blur-none"></div>
             <div className="animate-marquee relative z-10">
-              <span className="mx-2">Step 1. Poo </span>
-              <span className="mx-2">Step 2. Pee </span>
-              <span className="mx-2">Step 3. Shart </span>
+              <span className="mx-2">Never Stop Learning </span>
+              <span className="mx-2"> </span>
+              <span className="mx-2"> Outsource Your Doubt</span>
             </div>
           </div>
 

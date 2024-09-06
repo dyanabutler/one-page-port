@@ -14,11 +14,15 @@ const plexmono = IBM_Plex_Mono({ subsets: ["latin"], weight: "500", variable: '-
 export const metadata = {
   title: "Dyana Design",
   description: "web developer, designer, artist",
+  icons: {
+    icon: '/favicon.ico', // /public path
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${orbitron.variable} ${space.variable} ${ruslan.variable} ${handjet.variable} ${plexmono.variable}`}>
+      <link rel="icon" href="/favicon.ico" />
       <body>{children}
         
       </body>
