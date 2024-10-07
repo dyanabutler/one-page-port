@@ -7,11 +7,11 @@ export default function Details({ selectedProject }) {
   }
 
   return (
-    <section className="hidden md:block col-span-1 text-foreground border shadow p-6 h-full">
+    <section className="hidden  md:block col-span-1 text-foreground border shadow p-2 h-full">
      <h2 className="text-xl font-semibold font-orbitron mb-2 text-purple-200">DETAILS</h2>
      <div className="h-full flex flex-col">
         {/* Scrollable content */}
-        <div className="flex-grow max-h-[50vh] md:max-h-[50vh] lg:max-h-[49vh] lg-plus:max-h-[55vh]  custom-scrollbar overflow-y-auto">
+        <div className="flex-grow max-h-[55vh]   custom-scrollbar overflow-y-auto">
           {/* Title */}
           <h2 className="text-lg font-bold font-orbitron mb-4 ">{selectedProject.title}</h2>
 
@@ -54,10 +54,10 @@ export default function Details({ selectedProject }) {
         </div>
 
         {/* Links (GitHub and Website) */}
-        <div className="mt-4 font-orbitron">
+        <div className="mt-4 font-orbitron bg-transparent">
           <div className="flex space-x-2 ">
             {/* GitHub link with SVG */}
-            <a
+            {/* <a
               href={selectedProject.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -78,14 +78,14 @@ export default function Details({ selectedProject }) {
                 />
               </svg>
               Git
-            </a>
+            </a> */}
 
             {/* Website link with SVG */}
             <a
               href={selectedProject.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center  text-green-500 hover:underline"
+              className="flex items-center  text-indigo-300 hover:underline"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export default function Details({ selectedProject }) {
               >
                <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-3 5.753l6.44 5.247-6.44 5.263.678.737 7.322-6-7.335-6-.665.753z"/>
               </svg>
-              Website
+              Check out the Website
             </a>
           </div>
         </div>

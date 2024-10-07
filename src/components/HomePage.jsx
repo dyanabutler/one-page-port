@@ -11,7 +11,7 @@ export default function HomePage() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="fixed flex flex-col h-screen">
       {/* Header */}
       <Header />
 

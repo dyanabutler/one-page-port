@@ -61,7 +61,7 @@ export default function Projects({ setSelectedProject, selectedProject }) {
   };
 
   return (
-    <section className="col-span-1 text-foreground shadow md:border-border md:border-t md:border-b border-purple-200 h-full py-4  ">
+    <section className="col-span-1 text-foreground shadow md:border-border md:border-t md:border-b border-purple-200 h-full   ">
       <h2 className="text-xl font-semibold  text-purple-200 font-orbitron m-4">PROJECTS</h2>
 
       <ul>
@@ -73,7 +73,7 @@ export default function Projects({ setSelectedProject, selectedProject }) {
           >
             {/* Project Title */}
             <div className="flex justify-between items-center">
-              <span className="font-bold font-orbitron m-6 md:m-8 ">{project.title}</span>
+              <span className="font-bold font-orbitron m-6 md:m-4 ">{project.title}</span>
               <span className="mr-2">💠</span>
             </div>
 
@@ -122,7 +122,7 @@ export default function Projects({ setSelectedProject, selectedProject }) {
 
                   {/* GitHub and Website Links */}
                   <div className="flex space-x-4 my-4 font-orbitron">
-                    <a
+                    {/* <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -143,7 +143,7 @@ export default function Projects({ setSelectedProject, selectedProject }) {
                       />
                       </svg>
                       Git
-                    </a>
+                    </a> */}
 
                     <a
                       href={project.website}
