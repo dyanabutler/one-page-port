@@ -11,7 +11,8 @@ export default function Projects({ setSelectedProject, selectedProject }) {
       services: ['Web Development', 'Brand Kit Design', 'Wireframing'],
       stack: ['Next.JS', 'Webflow', 'CMS'],
       github: "https://github.com/your-project",
-      website: "https://voice.iaccess.life"
+      website: "https://voice.iaccess.life",
+      bgColor: '#1a202c',
     },
     {
       title: 'WRLD CHNGRS',
@@ -20,7 +21,8 @@ export default function Projects({ setSelectedProject, selectedProject }) {
       services: ['Front-end Website Development', 'UI/UX Design', 'Community Engagement'],
       stack: ['Figma', 'Next.JS', 'After Effects'],
       github: "https://github.com/",
-      website: "https://yarnodyssey.com"
+      website: "https://yarnodyssey.com",
+      bgColor: '#1a202c'
     },
     {
       title: 'YARN ODYSSEY by NOVA',
@@ -29,7 +31,8 @@ export default function Projects({ setSelectedProject, selectedProject }) {
       services: ['Full Stack Website Development', 'UI/UX Design', 'Product Management'],
       stack: ['Next.js', 'Prisma', 'Stripe API'],
       github: "https://github.com/your-project",
-      website: "https://yarnodyssey.com"
+      website: "https://yarnodyssey.com",
+      bgColor: '#1a202c'
     },
     {
       title: 'CYGOTH CLUB',
@@ -38,7 +41,8 @@ export default function Projects({ setSelectedProject, selectedProject }) {
       services: ['Digital Art', '', 'Community Engagement'],
       stack: ['Next.js', 'Procreate', 'OpenSea', ],
       github: "https://github.com/your-project",
-      website: "https://cygoth.io"
+      website: "https://cygoth.io",
+      bgColor: '#1a202c'
     },
     {
       title: 'MBIANCHINI.ART',
@@ -47,7 +51,8 @@ export default function Projects({ setSelectedProject, selectedProject }) {
       services: ['Website Development', 'UI/UX Design', 'Community Engagement'],
       stack: ['Next.js', 'Firebase', 'Stripe API'],
       github: "https://github.com/your-project",
-      website: "https://mbianchini.art"
+      website: "https://mbianchini.art",
+      bgColor: '#1a202c'
     },
    
    

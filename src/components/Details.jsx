@@ -7,7 +7,10 @@ export default function Details({ selectedProject }) {
   }
 
   return (
-    <section className="hidden  md:block col-span-1 text-foreground border shadow p-2 h-full">
+    <section
+      className="hidden md:block col-span-1 text-foreground border shadow p-12 h-full"
+      style={{ backgroundColor: selectedProject.bgColor || '#fff' }} // Default to white if no bgColor is provided
+    >
      <h2 className="text-xl font-semibold font-orbitron mb-2 text-purple-200">DETAILS</h2>
      <div className="h-full flex flex-col">
         {/* Scrollable content */}
