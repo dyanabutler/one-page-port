@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 export default function Details({ selectedProject }) {
   if (!selectedProject) {
-    return <p className="p-2 m-8 font-orbitron">Select a project to see details.</p>;
+    return <p className="p-2 m-8  font-orbitron"></p>;
   }
 
   return (
     <section
-      className="hidden md:block col-span-1 text-foreground border shadow p-12 h-full"
-      style={{ backgroundColor: selectedProject.bgColor || '#fff' }} // Default to white if no bgColor is provided
+      className="hidden md:block col-span-1 text-foreground   p-12 h-full"
+     // Default to white if no bgColor is provided
     >
      <h2 className="text-xl font-semibold font-orbitron mb-2 text-purple-200">DETAILS</h2>
      <div className="h-full flex flex-col">
