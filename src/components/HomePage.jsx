@@ -28,7 +28,7 @@ export default function HomePage() {
     // Add a small delay to let the panel animate out before displaying the new project
     setTimeout(() => {
       setSelectedProject(project);
-    }, 70); // Adjust the delay to match the animation timing for smoother effect
+    }, 150); // Adjust the delay to match the animation timing for smoother effect
   };
 
   return (
