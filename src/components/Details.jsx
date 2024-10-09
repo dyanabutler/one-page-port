@@ -88,7 +88,7 @@ export default function Details({ selectedProject }) {
               href={selectedProject.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center  text-indigo-300 hover:underline"
+              className="flex items-center  text-indigo-300 hover:text-indigo-600"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

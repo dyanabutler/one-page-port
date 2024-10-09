@@ -5,6 +5,17 @@ import { motion } from 'framer-motion'; // Importing Framer Motion
 
 export default function Projects({ setSelectedProject,  }) {
   const projects = [
+
+    {
+      title: 'ARC-H1VE',
+      description: 'A licensing platform for musicians and visual artists.',
+      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506643/archive-banner_xvyiys.png',
+      services: ['Web Development', 'Digital Art', 'Animation'],
+      stack: ['Next.js', 'Procreate', 'Typescript', ],
+      github: "https://github.com/your-project",
+      website: "https://archiveit.xyz",
+      bgColor: '#000'
+    },
     {
       title: 'VOICE by iAccess Life',
       description: 'The tech-driven feedback solution for accessibility',
@@ -47,15 +58,16 @@ export default function Projects({ setSelectedProject,  }) {
     },
     
     {
-      title: 'ARC-H1VE',
-      description: 'A licensing platform for musicians and visual artists.',
-      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506643/archive-banner_xvyiys.png',
-      services: ['Web Development', 'Digital Art', 'Animation'],
-      stack: ['Next.js', 'Procreate', 'Typescript', ],
+      title: 'MBIANCHINI.ART',
+      description: 'A personal portfolio for a distinctive traditional mixed-media artist',
+      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506645/mbianchini-banner_z5qklj.png',
+      services: ['UI/UX Design', 'Web Development', 'Videographer'],
+      stack: ['Next.js', 'Stripe Payments API'],
       github: "https://github.com/your-project",
-      website: "https://archiveit.xyz",
-      bgColor: '#000'
+      website: "https://mbianchini.art",
+      bgColor: '#1a202c'
     },
+
     {
       title: 'DUKEMEDIA.CO',
       description: 'A portfolio site for a creative videographer, photographer, and filmmaker',
@@ -65,16 +77,6 @@ export default function Projects({ setSelectedProject,  }) {
       github: "https://github.com/your-project",
       website: "https://dukemedia.co",
       bgColor: '#000'
-    },
-    {
-      title: 'MBIANCHINI.ART',
-      description: 'A personal portfolio for a distinctive traditional mixed-media artist',
-      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506645/mbianchini-banner_z5qklj.png',
-      services: ['UI/UX Design', 'Web Development', 'Videographer'],
-      stack: ['Next.js', 'Stripe Payments API'],
-      github: "https://github.com/your-project",
-      website: "https://mbianchini.art",
-      bgColor: '#1a202c'
     },
   ];
 
@@ -91,7 +93,7 @@ export default function Projects({ setSelectedProject,  }) {
   };
 
   return (
-    <section className="col-span-1 text-foreground shadow md:border-border md:border-t md:border-b p-8 border-purple-200 h-full">
+    <section className="col-span-1 text-foreground shadow  p-8 border-purple-200 h-full">
       <h2 className="text-xl font-semibold text-purple-200 font-orbitron m-4">PROJECTS</h2>
 
       <ul>
@@ -104,7 +106,7 @@ export default function Projects({ setSelectedProject,  }) {
             {/* Project Title */}
             <div className="flex justify-between items-center">
               <span className="font-bold font-orbitron m-6 md:m-4">{project.title}</span>
-              <span className="mr-2">💠</span>
+              <span className="mr-2">⚝</span>
             </div>
 
             {/* Mobile dropdown with slide-down animation */}
@@ -155,22 +157,17 @@ export default function Projects({ setSelectedProject,  }) {
                       href={project.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-green-500 hover:underline"
+                      className="flex items-center text-indigo-300 hover:underline"
                     >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 11H9m-4 2h5m4 0h5m-5-6h5m-5-2h3m1 8a9 9 0 110-18 9 9 0 010 18z"
-                        />
-                      </svg>
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+               <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-3 5.753l6.44 5.247-6.44 5.263.678.737 7.322-6-7.335-6-.665.753z"/>
+              </svg>
                       Website
                     </a>
                   </div>

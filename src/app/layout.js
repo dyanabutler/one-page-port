@@ -13,7 +13,7 @@ const plexmono = IBM_Plex_Mono({ subsets: ["latin"], weight: "500", variable: '-
 
 export const metadata = {
   title: "Dyana Design",
-  description: "web developer, designer, artist",
+  description: "web developer, designer, artist, webflow",
   icons: {
     icon: '/favicon.ico', // /public path
   },
