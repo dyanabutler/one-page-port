@@ -3,54 +3,75 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion'; // Importing Framer Motion
 
-export default function Projects({ setSelectedProject, selectedProject }) {
+export default function Projects({ setSelectedProject,  }) {
   const projects = [
     {
       title: 'VOICE by iAccess Life',
-      description: 'The Tech-Powered Feedback Solution for Accessibility',
+      description: 'The tech-driven feedback solution for accessibility',
       image: '/voice.svg',
-      services: ['Web Development', 'Brand Kit Design', 'Wireframing'],
+      services: ['UI/UX Design', 'Web Development', 'Branding'],
       stack: ['Next.JS', 'Webflow', 'CMS'],
       github: "https://github.com/your-project",
       website: "https://voice.iaccess.life",
       bgColor: '#000',
     },
     {
-      title: 'WRLD CHNGRS',
-      description: 'WRLD CHNGRS is a platform built for connecting communities with social impact projects.',
-      image: '/sticker_logo.png',
-      services: ['Front-end Website Development', 'UI/UX Design', 'Community Engagement'],
-      stack: ['Figma', 'Next.JS', 'After Effects'],
-      github: "https://github.com/",
-      website: "https://yarnodyssey.com",
-      bgColor: '#1a202c'
-    },
-    {
       title: 'YARN ODYSSEY by NOVA',
-      description: 'Nova has wares if you have coin! A fullstack e-commerce shop made by me (co-founder).',
-      image: '/yarn.png',
-      services: ['Full Stack Website Development', 'UI/UX Design', 'Product Management'],
+      description: 'An online store showcasing Novas crochet creations.',
+      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506646/yarn-odyssey-banner_nn85p7.png',
+      services: ['UI/UX Design', 'Web Development', 'Product Management'],
       stack: ['Next.js', 'Prisma', 'Stripe API'],
       github: "https://github.com/your-project",
       website: "https://yarnodyssey.com",
-      bgColor: '#1a202c'
+      bgColor: '#000'
+    },
+    {
+      title: 'WRLD CHNGRS',
+      description: 'A unique NFT universe with a character builder feature',
+      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506646/wrld-chngrs-banner_pphxde.png',
+      services: ['UI/UX Design', 'Wireframing', 'Graphic Design'],
+      stack: ['Figma', 'Digital Art', 'Adobe'],
+      github: "https://github.com/",
+      website: "https://wrld-chngrs.com",
+      bgColor: '#000'
     },
     {
       title: 'CYGOTH CLUB',
-      description: 'My own stab at an NFT Collection',
-      image: '/cygoth.gif',
-      services: ['Digital Art', '', 'Community Engagement'],
+      description: 'My take on creating an NFT collection',
+      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506644/cygoth-club-banner_c52oxe.png',
+      services: ['Web Development', 'Digital Art', 'Cartoonist'],
       stack: ['Next.js', 'Procreate', 'OpenSea', ],
       github: "https://github.com/your-project",
       website: "https://cygoth.io",
       bgColor: '#1a202c'
     },
+    
+    {
+      title: 'ARC-H1VE',
+      description: 'A licensing platform for musicians and visual artists.',
+      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506643/archive-banner_xvyiys.png',
+      services: ['Web Development', 'Digital Art', 'Animation'],
+      stack: ['Next.js', 'Procreate', 'Typescript', ],
+      github: "https://github.com/your-project",
+      website: "https://archiveit.xyz",
+      bgColor: '#000'
+    },
+    {
+      title: 'DUKEMEDIA.CO',
+      description: 'A portfolio site for a creative videographer, photographer, and filmmaker',
+      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506644/duke-media-banner_ajdfxi.png',
+      services: ['Website Development', 'UI/UX Design', 'Wireframing'],
+      stack: ['Webflow', 'Figma', 'CMS'],
+      github: "https://github.com/your-project",
+      website: "https://dukemedia.co",
+      bgColor: '#000'
+    },
     {
       title: 'MBIANCHINI.ART',
-      description: 'My first portfolio creation for a traditional artist. In progress',
-      image: '/bianchini.png',
-      services: ['Website Development', 'UI/UX Design', 'Community Engagement'],
-      stack: ['Next.js', 'Firebase', 'Stripe API'],
+      description: 'A personal portfolio for a distinctive traditional mixed-media artist',
+      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506645/mbianchini-banner_z5qklj.png',
+      services: ['UI/UX Design', 'Web Development', 'Videographer'],
+      stack: ['Next.js', 'Stripe Payments API'],
       github: "https://github.com/your-project",
       website: "https://mbianchini.art",
       bgColor: '#1a202c'
@@ -70,7 +91,7 @@ export default function Projects({ setSelectedProject, selectedProject }) {
   };
 
   return (
-    <section className="col-span-1 text-foreground shadow md:border-border md:border-t md:border-b border-purple-200 h-full">
+    <section className="col-span-1 text-foreground shadow md:border-border md:border-t md:border-b p-8 border-purple-200 h-full">
       <h2 className="text-xl font-semibold text-purple-200 font-orbitron m-4">PROJECTS</h2>
 
       <ul>

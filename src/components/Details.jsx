@@ -8,24 +8,24 @@ export default function Details({ selectedProject }) {
 
   return (
     <section
-      className="hidden md:block col-span-1 text-foreground   p-12 h-full"
+      className="hidden md:block col-span-1 bg-black text-foreground   p-12 h-full"
      // Default to white if no bgColor is provided
     >
      <h2 className="text-xl font-semibold font-orbitron mb-2 text-purple-200">DETAILS</h2>
      <div className="h-full flex flex-col">
         {/* Scrollable content */}
-        <div className="flex-grow max-h-[55vh]   custom-scrollbar overflow-y-auto">
+        <div className="flex-grow max-h-[55vh] custom-scrollbar overflow-y-auto">
           {/* Title */}
           <h2 className="text-lg font-bold font-orbitron mb-4 ">{selectedProject.title}</h2>
 
-          {/* Image (now underneath the title, full width) */}
+        
           <div className="flex justify-center items-center w-full  mb-4">
             <Image
               src={selectedProject.image}
               alt={selectedProject.title}
               className="w-full h-auto rounded"
-              height={250}
-              width={600} // Adjusted width and height for better scaling
+              height={3000}
+              width={3000} // Adjusted width and height for better scaling
             />
           </div>
 

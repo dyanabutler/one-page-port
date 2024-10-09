@@ -16,9 +16,9 @@ export default function Header() {
       {/* h1 Section with Borders */}
       <div className=" ">
         <Image
-          src="/header2.png"
+          src="https://res.cloudinary.com/dyanabutler/image/upload/v1728508022/header-with-logo_y0eyih.png"
           alt="header image"
-          className="w-full h-auto"
+          className="w-full h-auto "
           height="78"
           width="2000"
         />
