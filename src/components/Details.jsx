@@ -8,18 +8,18 @@ export default function Details({ selectedProject }) {
 
   return (
     <section
-      className="hidden md:block col-span-1 bg-black text-foreground   p-12 h-full"
-     // Default to white if no bgColor is provided
+      className="hidden md:block col-span-1 bg-black text-foreground pb-8 px-8 pt-4  h-full"
+    
     >
      <h2 className="text-xl font-semibold font-orbitron mb-2 text-purple-200">DETAILS</h2>
      <div className="h-full flex flex-col">
         {/* Scrollable content */}
         <div className="flex-grow max-h-[55vh] custom-scrollbar overflow-y-auto">
           {/* Title */}
-          <h2 className="text-lg font-bold font-orbitron mb-4 ">{selectedProject.title}</h2>
+          <h2 className="text-lg font-bold font-orbitron mb-2 ">{selectedProject.title}</h2>
 
         
-          <div className="flex justify-center items-center w-full  mb-4">
+          <div className="flex justify-center items-center w-full  mb-2">
             <Image
               src={selectedProject.image}
               alt={selectedProject.title}
@@ -30,14 +30,14 @@ export default function Details({ selectedProject }) {
           </div>
 
           {/* Description (underneath the image) */}
-          <p className="text-md font-plexmono mb-6 ">{selectedProject.description}</p>
+          <p className="text-md font-plexmono mb-4 ">{selectedProject.description}</p>
 
           {/* Services and Stack */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             {/* Services */}
             <div>
               <h3 className="text-md md:text-lg font-semibold mb-2 font-orbitron text-purple-200">Services</h3>
-              <ul className=" list-inside space-y-1 text-sm md:text-lg font-plexmono">
+              <ul className=" list-inside space-y-1 text-sm  font-plexmono">
                 {selectedProject.services.map((service, index) => (
                   <li key={index}>{service}</li>
                 ))}
@@ -47,7 +47,7 @@ export default function Details({ selectedProject }) {
             {/* Stack */}
             <div>
               <h3 className="text-md md:text-lg font-semibold mb-2 font-orbitron text-purple-200">Stack</h3>
-              <ul className=" list-inside space-y-1 text-sm md:text-lg font-plexmono">
+              <ul className=" list-inside space-y-1 text-sm  font-plexmono">
                 {selectedProject.stack.map((tech, index) => (
                   <li key={index}>{tech}</li>
                 ))}

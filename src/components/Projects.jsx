@@ -70,7 +70,7 @@ export default function Projects({ setSelectedProject,  }) {
 
     {
       title: 'DUKEMEDIA.CO',
-      description: 'A portfolio site for a creative videographer, photographer, and filmmaker',
+      description: 'A portfolio for a cool videographer, photographer, and filmmaker',
       image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506644/duke-media-banner_ajdfxi.png',
       services: ['Website Development', 'UI/UX Design', 'Wireframing'],
       stack: ['Webflow', 'Figma', 'CMS'],
@@ -93,7 +93,7 @@ export default function Projects({ setSelectedProject,  }) {
   };
 
   return (
-    <section className="col-span-1 text-foreground shadow  p-8 border-purple-200 h-full">
+    <section className="col-span-1 text-foreground shadow  pb-8 px-8 border-purple-200 h-full">
       <h2 className="text-xl font-semibold text-purple-200 font-orbitron m-4">PROJECTS</h2>
 
       <ul>

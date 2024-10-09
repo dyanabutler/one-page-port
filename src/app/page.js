@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <HomePage />
+      
       <div className=" p-2 m-8  h-full">
+        
         {/* Small background image when no project is selected */}
         <div className="hidden fixed inset-0 md:flex flex-col items-center justify-center mt-48 -z-10 ">
           <Image

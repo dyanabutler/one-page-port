@@ -39,7 +39,7 @@ export default function HomePage() {
 
       {/* Main content grows to fill space, ensuring footer is at the bottom */}
       <div className="flex-grow flex">
-        <div className="grid grid-cols-1 md:grid-cols-3 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full ">
           {/* Projects comes first */}
           <Projects setSelectedProject={handleProjectClick} className="z-10" />
 
