@@ -57,7 +57,7 @@ export default function Details({ selectedProject }) {
         </div>
 
         {/* Links (GitHub and Website) */}
-        <div className="mt-4 font-orbitron bg-transparent">
+        <div className="font-orbitron bg-transparent">
           <div className="flex space-x-2 ">
             {/* GitHub link with SVG */}
             {/* <a
