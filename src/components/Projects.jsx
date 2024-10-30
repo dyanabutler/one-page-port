@@ -75,7 +75,7 @@ export default function Projects({ setSelectedProject,  }) {
       services: ['Website Development', 'UI/UX Design', 'Wireframing'],
       stack: ['Webflow', 'Figma', 'CMS'],
       github: "https://github.com/your-project",
-      website: "https://dukemedia.co",
+      website: "https://duke-media-544a2a-00e5cb4d88917856f6b73.webflow.io/",
       bgColor: '#000'
     },
   ];
