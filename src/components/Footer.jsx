@@ -46,8 +46,11 @@ const Footer = () => {
 
        {/* Right side: Copyright */}
        <div className="md:text-xs text-sm text-muted-foreground">
-          &copy; 2024
+        <a href="/">
+        <p>  &copy; Home </p>
+        </a>
         </div>
+       
 
       
         <div className="flex flex-wrap justify-center space-x-6 md:pl-32">

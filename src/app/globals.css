@@ -101,3 +101,26 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background-color: #6a40b5; /* Darker purple on hover */
 }
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Override default Natural Gallery styles to match your design */
+.natural-gallery-js {
+  --ng-boxshadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --ng-margin: 0;
+  --ng-background: transparent;
+  --ng-height: auto;
+  --ng-loader-color: currentColor;
+}
+
+.natural-gallery-js .figure {
+  transition: transform 0.3s ease;
+}
+
+.natural-gallery-js .figure:hover {
+  transform: scale(1.02);
+}

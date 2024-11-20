@@ -8,12 +8,12 @@ export default function Projects({ setSelectedProject,  }) {
 
     {
       title: 'ARC-H1VE',
-      description: 'A licensing platform for musicians and visual artists.',
+      description: 'A community for musicians and visual artists',
       image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506643/archive-banner_xvyiys.png',
       services: ['Web Development', 'Digital Art', 'Animation'],
       stack: ['Next.js', 'Procreate', 'Typescript', ],
       github: "https://github.com/your-project",
-      website: "https://archiveit.xyz",
+      website: "https://artistsrightscouncil.com",
       bgColor: '#000'
     },
     {
