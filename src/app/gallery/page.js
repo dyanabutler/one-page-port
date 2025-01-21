@@ -10,17 +10,21 @@ import Footer from '@/components/Footer'
 const imageUrls = [
   `https://res.cloudinary.com/dyanabutler/image/upload/v1737499736/wrldchngrs_sticker_v6afsw.png`,
   `https://res.cloudinary.com/dyanabutler/image/upload/v1737499771/emobunni_art__sample_shroomline_uvszf7.png`,
-  `https://res.cloudinary.com/dyanabutler/image/upload/v1737497089/felipesfiesta_bday_poster_yvt2ms.png`,
+  `https://res.cloudinary.com/dyanabutler/image/upload/v1737501557/wc_keyboardwarrior_txzcfq.png`,
+'https://res.cloudinary.com/dyanabutler/image/upload/v1737501557/wc_nightsky_zfaxql.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1737496977/yo_mittens_pattern_thumbnail_aaw5tm.png',
+  `https://res.cloudinary.com/dyanabutler/image/upload/v1737497089/felipesfiesta_bday_poster_yvt2ms.png`,
+  'https://res.cloudinary.com/dyanabutler/image/upload/v1737501557/wc_nightsky_zfaxql.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732082465/shego_rbsd8o.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732081196/AJ_-_One_on_One_by_Shroomline_mnzuvo.png',
+  'https://res.cloudinary.com/dyanabutler/image/upload/v1737501916/wc_Abstract_city_4__Medium_czf9ry.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732081508/Paul_and_I_on_the_piano__q1uimw.png',
-
+  'https://res.cloudinary.com/dyanabutler/image/upload/v1737501556/wc_healer_d4ogaq.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732082465/Braids_gorl_wxz2cu.png',
-
+  'https://res.cloudinary.com/dyanabutler/image/upload/v1737501856/ofc_yfcxq3.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732082465/Gorls_d8tmoi.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732082464/biopic2_b2ymhf.png',
-
+  'https://res.cloudinary.com/dyanabutler/image/upload/v1737501856/wc_Comic_City_1_wowaia.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732082466/Bawb_bijycv.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1732081196/mine_and_yours__tneujs.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732081513/Interview_Pt_1_bidwod.png',
