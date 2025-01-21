@@ -18,6 +18,32 @@ export default function HomePage() {
     visible: { x: 0, opacity: 1 }, // Slide into view
   };
 
+  // New container variants for staggered children animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Delay between each child animation
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  // Variants for individual sections
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut"
+      }
+    }
+  };
+
   const handleProjectClick = (project) => {
     // Check if the new project is the same as the current one to avoid unnecessary animation
     if (project === selectedProject) return;
@@ -32,16 +58,24 @@ export default function HomePage() {
   };
 
   return (
-    <div className="md:fixed flex flex-col h-screen">
-       
-      {/* Header */}
-      <Header />
+    <motion.div 
+      className="md:fixed flex flex-col h-screen"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      {/* Header with fade-in */}
+      <motion.div variants={sectionVariants}>
+        <Header />
+      </motion.div>
 
       {/* Main content grows to fill space, ensuring footer is at the bottom */}
       <div className="flex-grow flex">
         <div className="grid grid-cols-1 md:grid-cols-3 w-full ">
           {/* Projects comes first */}
-          <Projects setSelectedProject={handleProjectClick} className="z-10" />
+          <motion.div variants={sectionVariants}>
+            <Projects setSelectedProject={handleProjectClick} className="z-10" />
+          </motion.div>
 
           {/* Details component wrapped with motion.div for animation */}
           <motion.div
@@ -55,12 +89,16 @@ export default function HomePage() {
           </motion.div>
 
           {/* About comes last */}
-          <About />
+          <motion.div variants={sectionVariants}>
+            <About />
+          </motion.div>
         </div>
       </div>
 
-     
-      <Footer />
-    </div>
+      {/* Footer with fade-in */}
+      <motion.div variants={sectionVariants}>
+        <Footer />
+      </motion.div>
+    </motion.div>
   );
 }

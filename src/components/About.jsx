@@ -20,7 +20,7 @@ export default function About() {
         />
 
         {/* Text next to the image */}
-        <p className='font-plexmono' >Dyana is an experienced UI/UX designer and a full stack developer in training.</p>
+        <p className='font-plexmono' >Dyana is an experienced UI/UX designer and a full stack developer in training.<br></br> <br></br>i like to draw album art for fun</p>
       </div>
 
       {/* Skills Section with SVG Icons - Only visible on medium screens and larger */}
@@ -35,7 +35,7 @@ export default function About() {
       </div>
       <a href="/gallery" >
           <button className="px-4 py-2 mt-4 w-full text-white text-lg font-orbitron font-semibold rounded-none border border-indigo-700 shadow-md hover:bg-indigo-700 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50">
-            View My Art
+            View Gallery
           </button>
         </a>
 

@@ -3,17 +3,28 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion'; // Importing Framer Motion
 
+const imageVariants = {
+  hidden: { opacity: 0 },
+  visible: { 
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+      ease: "easeOut"
+    }
+  }
+};
+
 export default function Projects({ setSelectedProject,  }) {
   const projects = [
 
     {
       title: 'ARC-H1VE',
       description: 'A community for musicians and visual artists',
-      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506643/archive-banner_xvyiys.png',
+      image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1737496386/ARC-H1VE_LOGO_t1nsqj.png',
       services: ['Web Development', 'Digital Art', 'Animation'],
       stack: ['Next.js', 'Procreate', 'Typescript', ],
       github: "https://github.com/your-project",
-      website: "https://artistsrightscouncil.com",
+      website: "https://vers1ons.com",
       bgColor: '#000'
     },
     {
@@ -30,10 +41,10 @@ export default function Projects({ setSelectedProject,  }) {
       title: 'YARN ODYSSEY by NOVA',
       description: 'An online store showcasing Novas crochet creations.',
       image: 'https://res.cloudinary.com/dyanabutler/image/upload/v1728506646/yarn-odyssey-banner_nn85p7.png',
-      services: ['UI/UX Design', 'Web Development', 'Product Management'],
-      stack: ['Next.js', 'Prisma', 'Stripe API'],
+      services: ['Social Media', 'Marketing', 'Product Management'],
+      stack: ['Instagram', 'Discord', `Google Ads`],
       github: "https://github.com/your-project",
-      website: "https://yarnodyssey.com",
+      website: "https://www.instagram.com/yarn.odyssey",
       bgColor: '#000'
     },
     {
@@ -100,12 +111,19 @@ export default function Projects({ setSelectedProject,  }) {
         {projects.map((project, index) => (
           <li
             key={index}
-            className="cursor-pointer p-1 border-b border-purple-200 hover:bg-black md:hover:bg-muted-foreground md:hover:text-black flex flex-col"
+            className={`cursor-pointer p-1 border-b border-purple-200 
+              ${activeIndex === index 
+                ? 'bg-muted-foreground text-black' 
+                : 'hover:bg-black md:hover:bg-slate-900 '
+              } 
+              flex flex-col`}
             onClick={() => handleProjectClick(project, index)}
           >
             {/* Project Title */}
             <div className="flex justify-between items-center">
-              <span className="font-bold font-orbitron m-6 md:m-4">{project.title}</span>
+              <span className={`font-bold m-6 md:m-4 ${activeIndex === index ? 'text-black' : ''}`}>
+                {project.title}
+              </span>
               <span className="mr-2">⚝</span>
             </div>
 
@@ -121,13 +139,22 @@ export default function Projects({ setSelectedProject,  }) {
                 <div className="p-4 bg-transparent rounded shadow">
                   {/* Image and Description */}
                   <div className="flex flex-col mb-6">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-auto rounded mb-4"
-                      height="250"
-                      width="250"
-                    />
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      variants={imageVariants}
+                    >
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-auto rounded mb-4"
+                        height="250"
+                        width="250"
+                        loading="eager"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQrJyEwPENBLzMzLy0zPVBCR0JHMz1DcWl5VGR2h4iIl5eXqqqq+vr6////2wBDAR"
+                      />
+                    </motion.div>
                     <p className="text-muted-foreground font-plexmono">{project.description}</p>
                   </div>
 

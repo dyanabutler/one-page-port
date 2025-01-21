@@ -16,7 +16,7 @@ export default function Details({ selectedProject }) {
         {/* Scrollable content */}
         <div className="flex-grow max-h-[55vh] custom-scrollbar overflow-y-auto">
           {/* Title */}
-          <h2 className="text-lg font-bold font-orbitron mb-2 ">{selectedProject.title}</h2>
+          {/* <h2 className="text-lg font-orbitron mb-2 ">{selectedProject.title}</h2> */}
 
         
           <div className="flex justify-center items-center w-full  mb-2">
@@ -30,7 +30,7 @@ export default function Details({ selectedProject }) {
           </div>
 
           {/* Description (underneath the image) */}
-          <p className="text-md font-plexmono mb-4 ">{selectedProject.description}</p>
+          <p className="text-md mb-4 ">{selectedProject.description}</p>
 
           {/* Services and Stack */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
