@@ -14,7 +14,7 @@ const imageUrls = [
 'https://res.cloudinary.com/dyanabutler/image/upload/v1737501557/wc_nightsky_zfaxql.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1737496977/yo_mittens_pattern_thumbnail_aaw5tm.png',
   `https://res.cloudinary.com/dyanabutler/image/upload/v1737497089/felipesfiesta_bday_poster_yvt2ms.png`,
-  'https://res.cloudinary.com/dyanabutler/image/upload/v1737501557/wc_nightsky_zfaxql.png',
+ 
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732082465/shego_rbsd8o.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732081196/AJ_-_One_on_One_by_Shroomline_mnzuvo.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1737501916/wc_Abstract_city_4__Medium_czf9ry.png',

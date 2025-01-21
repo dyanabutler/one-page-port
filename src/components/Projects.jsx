@@ -121,7 +121,7 @@ export default function Projects({ setSelectedProject,  }) {
           >
             {/* Project Title */}
             <div className="flex justify-between items-center">
-              <span className={`font-bold m-6 md:m-4 ${activeIndex === index ? 'text-black' : ''}`}>
+              <span className={`font-bold m-6 md:m-4 ${activeIndex === index ? 'md:text-black text-white' : ''}`}>
                 {project.title}
               </span>
               <span className="mr-2">⚝</span>
