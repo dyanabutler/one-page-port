@@ -113,7 +113,7 @@ export default function Projects({ setSelectedProject,  }) {
             key={index}
             className={`cursor-pointer p-1 border-b border-purple-200 
               ${activeIndex === index 
-                ? 'bg-muted-foreground text-black' 
+                ? 'md:bg-muted-foreground md:text-black' 
                 : 'hover:bg-black md:hover:bg-slate-900 '
               } 
               flex flex-col`}
