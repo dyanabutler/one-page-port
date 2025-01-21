@@ -27,8 +27,8 @@ const imageUrls = [
   'https://res.cloudinary.com/dyanabutler/image/upload/v1737501856/wc_Comic_City_1_wowaia.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/v1732082466/Bawb_bijycv.png',
   'https://res.cloudinary.com/dyanabutler/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1732081196/mine_and_yours__tneujs.png',
-  'https://res.cloudinary.com/dyanabutler/image/upload/v1732081513/Interview_Pt_1_bidwod.png',
-  'https://res.cloudinary.com/dyanabutler/image/upload/v1732081530/Shroomline_Nov-2024_Green-04_baud9c.png',
+  // 'https://res.cloudinary.com/dyanabutler/image/upload/v1732081513/Interview_Pt_1_bidwod.png',
+  // 'https://res.cloudinary.com/dyanabutler/image/upload/v1732081530/Shroomline_Nov-2024_Green-04_baud9c.png',
 ]
 
 export default function MasonryGallery() {
